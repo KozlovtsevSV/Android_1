@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/colorAccent"
         android:textSize="25sp"
-        android:text="EditText" />
+        android:text="" />
 
     <Button
         android:id="@+id/button"
