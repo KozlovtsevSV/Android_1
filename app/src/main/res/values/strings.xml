@@ -20,6 +20,9 @@
     <string name="buttonPercent">%</string>
     <string name="buttonC">С</string>
     <string name="buttonBackspace"><![CDATA[<-]]></string>
+    <string name="MyTheme">MyTheme</string>
+    <string name="MyThemeDark">MyThemeDark</string>
+
 
 
 </resources>

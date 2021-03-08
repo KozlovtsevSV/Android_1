@@ -4,10 +4,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:background="@drawable/background"
-    android:padding="10dp">
 
+    android:gravity="center"
+    android:padding="10dp">
+    <!-- android:background="@drawable/background" -->
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,12 +18,13 @@
             android:id="@+id/editTextInfoField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_span="4"
+            android:layout_span="5"
             android:background="@android:color/transparent"
             android:inputType="number"
             android:focusable="false"
             android:gravity="right"
-            android:textSize="@dimen/workField_text_size"
+            android:visibility="gone"
+             android:textSize="@dimen/workField_text_size"
             />
 
     </TableRow>
@@ -32,14 +33,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="20dp"
+
         android:gravity="center">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextWorkField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_span="4"
-            android:background="#ffffff"
+            android:layout_span="6"
+            android:background="@color/colorEditTextWorkField"
             android:inputType="number"
             android:focusable="false"
             android:gravity="right"
@@ -53,98 +55,43 @@
         android:layout_height="match_parent"
         android:gravity="center">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            android:background="@drawable/button_border"
             android:id="@+id/buttonPercent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/key_text_size"
             android:text="@string/buttonPercent" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonCe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/key_text_size"
             android:text="@string/buttonCE" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/key_text_size"
             android:text="@string/buttonC" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonBackspace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/key_text_size"
             android:text="@string/buttonBackspace" />
 
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center">
-
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/key_text_size"
-            android:text="@string/button1" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/key_text_size"
-            android:text="@string/button2" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/key_text_size"
-            android:text="@string/button3" />
-
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonDiv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/key_text_size"
             android:text="@string/buttonDiv" />
 
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center">
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/key_text_size"
-            android:text="@string/button4" />
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/key_text_size"
-            android:text="@string/button5" />
-
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/key_text_size"
-            android:text="@string/button6" />
-
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonMultiplication"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -158,28 +105,42 @@
         android:layout_height="match_parent"
         android:gravity="center">
 
-        <Button
-            android:id="@+id/button7"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/key_text_size"
-            android:text="@string/button7" />
+            android:text="@string/button1" />
 
-        <Button
-            android:id="@+id/button8"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/key_text_size"
-            android:text="@string/button8" />
+            android:text="@string/button2" />
 
-        <Button
-            android:id="@+id/button9"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/key_text_size"
-            android:text="@string/button9" />
+            android:text="@string/button3" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/key_text_size"
+            android:text="@string/button4" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/key_text_size"
+            android:text="@string/button5" />
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonMinus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -193,26 +154,39 @@
         android:layout_height="match_parent"
         android:gravity="center">
 
-        <Button
-            android:id="@+id/button0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_span="2"
-            android:textSize="@dimen/key_text_size"
-            android:text="@string/button0" />
-
-        <Button
-            android:id="@+id/buttonPt"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/key_text_size"
-            android:text="@string/buttonPt" />
+            android:text="@string/button6" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/key_text_size"
+            android:text="@string/button7" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/key_text_size"
+            android:text="@string/button8" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/key_text_size"
+            android:text="@string/button9" />
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPlus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/key_text_size"
+            android:layout_span="2"
             android:text="@string/buttonPlus" />
 
     </TableRow>
@@ -222,11 +196,25 @@
         android:layout_height="match_parent"
         android:gravity="center">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:textSize="@dimen/key_text_size"
+            android:text="@string/button0" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonPt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/key_text_size"
+            android:text="@string/buttonPt" />
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_span="4"
+            android:layout_span="5"
             android:textSize="@dimen/key_text_size"
             android:text="@string/buttonResult" />
 
