@@ -1,12 +1,16 @@
 package com.example.lesson_1;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.switchmaterial.SwitchMaterial;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,15 +23,6 @@ public class MainActivity extends AppCompatActivity {
     private Boolean flagNewNum = true;
     private Boolean flagDivBy_0 = false;
     private Boolean flagInfinite = false;
-//    // Имя параметра в настройках
-//    private static final String appTheme = "APP_THEME";
-//    // Имя настроек
-//    private static final String nameSharedPreference = "LOGIN";
-//
-//    private static final int myCoolCodeStyle = 0;
-//    private static final int appThemeLightCodeStyle = 1;
-//    private static final int appThemeCodeStyle = 2;
-//    private static final int appThemeDarkCodeStyle = 3;
 
     private Operations currentOperation = Operations.RESULT;
     private final String POINT_REPRESENTATION = ".";
@@ -38,13 +33,14 @@ public class MainActivity extends AppCompatActivity {
     private EditText mEditTextWorkField;
     private EditText mEditTextInfoField;
     private Button mbuttonPt;
+    private SwitchMaterial switchDarkTheme;
 
     private static final String prefs = "prefs.xml";
-    private static final String pref_name = "theme";
+    private static final String pref_name = "APP_THEME";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //setTheme(getAppTheme(R.style.MyThemeDark));
+
 
         boolean isNightTheme = getSharedPreferences(prefs, MODE_PRIVATE).
                 getBoolean(pref_name, false);
@@ -60,45 +56,31 @@ public class MainActivity extends AppCompatActivity {
         initButtonNumbers();
         mEditTextWorkField = findViewById(R.id.editTextWorkField);
         mEditTextInfoField = findViewById(R.id.editTextInfoField);
+
+        switchDarkTheme = findViewById(R.id.switchDarkTheme);
+        switchDarkTheme.setChecked(isNightTheme);
+        switchDarkTheme.setOnCheckedChangeListener(
+                (CompoundButton buttonView, boolean isChecked) -> {
+                    SharedPreferences sharedPreferences = getSharedPreferences(prefs, MODE_PRIVATE);
+                    if (sharedPreferences.getBoolean(pref_name, false) != isChecked) {
+                        sharedPreferences.edit().
+                                putBoolean(pref_name, isChecked).apply();
+                        recreate();
+                    }
+                });
+
         upDateWorkField();
     }
 
-//    private int getAppTheme(int codeStyle) {
-//        return codeStyleToStyleId(getCodeStyle(codeStyle));
+//    private void writeAppConfig(){
+//
 //    }
 //
-//    // Чтение настроек, параметр «тема»
-//    private int getCodeStyle(int codeStyle){
-//        // Работаем через специальный класс сохранения и чтения настроек
-//        SharedPreferences sharedPref = getSharedPreferences(nameSharedPreference, MODE_PRIVATE);
-//        //Прочитать тему, если настройка не найдена - взять по умолчанию
-//        return sharedPref.getInt(appTheme, codeStyle);
-//    }
+//    private SharedPreferences readAppConfig(){
 //
-//    // Сохранение настроек
-//    private void setAppTheme(int codeStyle) {
-//        SharedPreferences sharedPref = getSharedPreferences(nameSharedPreference, MODE_PRIVATE);
-//        // Настройки сохраняются посредством специального класса editor.
-//        SharedPreferences.Editor editor = sharedPref.edit();
-//        editor.putInt(appTheme, codeStyle);
-//        editor.apply();
-//    }
-//
-//    private int codeStyleToStyleId(int codeStyle){
-//        switch(codeStyle){
-//            case appThemeCodeStyle:
-//                return R.style.AppTheme;
-//            case appThemeLightCodeStyle:
-//                return R.style.MyTheme;
-//            case appThemeDarkCodeStyle:
-//                return R.style.MyThemeDark;
-//            default:
-//                return R.style.MyTheme;
-//        }
 //    }
 
-
-    public String firstUpperCase(String word){
+    private String firstUpperCase(String word){
         if(word == null || word.isEmpty()) return "";
         return word.substring(0, 1).toUpperCase() + word.substring(1).toLowerCase();
     }
@@ -229,6 +211,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case RESULT:
                 resultOperation = number;
+                number = 0d;
                 break;
             }
 
@@ -236,7 +219,6 @@ public class MainActivity extends AppCompatActivity {
 
         double scale = Math.pow(10, MAX_ACCURACY);
         resultOperation = Math.ceil(resultOperation * scale) / scale;
-
         flagNewNum = true;
         textWorkField = Double.toString(resultOperation);
         upDateWorkField();
@@ -274,7 +256,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void upDateInfoField() {
         if(resultOperation != 0) {
-            mEditTextInfoField.setText(Double.toString(resultOperation) + getStringOperation());
+            mEditTextInfoField.setText(Double.toString(resultOperation) + getStringOperation() + (number != 0d ? Double.toString(number): ""));
         }
         else{
             mEditTextInfoField.setText("");
@@ -336,6 +318,7 @@ public class MainActivity extends AppCompatActivity {
         flagNewNum = true;
         currentOperation = Operations.RESULT;
         upDateWorkField();
+        upDateInfoField();
     }
 
 }

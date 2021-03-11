@@ -2,6 +2,7 @@
 
 <TableLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -12,12 +13,38 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="10dp"
+        android:gravity="right">
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchDarkTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:buttonTint="@color/colorPrimary"
+            android:shadowColor="@color/black"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:shadowRadius="20"
+            android:text="@string/switchDarkThemeText"
+            android:textColor="@color/white"
+            android:textOff="OFF"
+            android:textOn="ON"
+            android:textSize="@dimen/switchDarkTheme_text_size"
+            app:showText="true" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
         android:gravity="center">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextInfoField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:layout_span="4"
             android:background="@android:color/transparent"
             android:inputType="number"
@@ -34,10 +61,11 @@
         android:layout_marginBottom="20dp"
         android:gravity="center">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextWorkField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:layout_span="4"
             android:background="#ffffff"
             android:inputType="number"
@@ -53,33 +81,37 @@
         android:layout_height="match_parent"
         android:gravity="center">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPercent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/key_text_size"
-            android:text="@string/buttonPercent" />
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
+            android:text="@string/buttonPercent"
+            android:textSize="@dimen/key_text_size" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonCe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/key_text_size"
-            android:text="@string/buttonCE" />
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
+            android:text="@string/buttonCE"
+            android:textSize="@dimen/key_text_size" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/key_text_size"
-            android:text="@string/buttonC" />
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
+            android:text="@string/buttonC"
+            android:textSize="@dimen/key_text_size" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonBackspace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/key_text_size"
-            android:text="@string/buttonBackspace" />
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
+            android:text="@string/buttonBackspace"
+            android:textSize="@dimen/key_text_size" />
 
     </TableRow>
 
@@ -88,31 +120,35 @@
         android:layout_height="match_parent"
         android:gravity="center">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/button1" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/button2" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/button3" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonDiv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/buttonDiv" />
 
@@ -123,31 +159,35 @@
         android:layout_height="match_parent"
         android:gravity="center">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/button4" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/button5" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/button6" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonMultiplication"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/buttonMultiplication" />
 
@@ -158,31 +198,35 @@
         android:layout_height="match_parent"
         android:gravity="center">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/button7" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/button8" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/button9" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonMinus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/buttonMinus" />
 
@@ -193,25 +237,28 @@
         android:layout_height="match_parent"
         android:gravity="center">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:layout_span="2"
             android:textSize="@dimen/key_text_size"
             android:text="@string/button0" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/key_text_size"
-            android:text="@string/buttonPt" />
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
+            android:text="@string/buttonPt"
+            android:textSize="@dimen/key_text_size" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPlus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/buttonPlus" />
 
@@ -222,10 +269,11 @@
         android:layout_height="match_parent"
         android:gravity="center">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:layout_span="4"
             android:textSize="@dimen/key_text_size"
             android:text="@string/buttonResult" />

@@ -4,27 +4,41 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:gravity="center"
+    android:background="@drawable/background"
     android:padding="10dp">
-    <!-- android:background="@drawable/background" -->
+
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="10dp"
         android:gravity="center">
 
-        <EditText
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchDarkTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:buttonTint="@color/colorPrimary"
+            android:text="@string/switchDarkThemeText"
+            android:textColor="@color/white"
+            android:textOff="OFF"
+            android:textOn="ON"
+            android:textSize="@dimen/switchDarkTheme_text_size"
+            android:showText="true" />
+
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextInfoField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_span="5"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
+            android:layout_span="4"
             android:background="@android:color/transparent"
             android:inputType="number"
             android:focusable="false"
             android:gravity="right"
-            android:visibility="gone"
-             android:textSize="@dimen/workField_text_size"
+
+            android:textSize="@dimen/workField_text_size"
             />
 
     </TableRow>
@@ -32,16 +46,15 @@
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="20dp"
-
+        android:layout_marginBottom="1dp"
         android:gravity="center">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextWorkField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:layout_span="6"
-            android:background="@color/colorEditTextWorkField"
             android:inputType="number"
             android:focusable="false"
             android:gravity="right"
@@ -56,17 +69,18 @@
         android:gravity="center">
 
         <com.google.android.material.button.MaterialButton
-            android:background="@drawable/button_border"
             android:id="@+id/buttonPercent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/key_text_size"
-            android:text="@string/buttonPercent" />
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
+            android:text="@string/buttonPercent"
+            android:textSize="@dimen/key_text_size" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonCe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/buttonCE" />
 
@@ -74,6 +88,7 @@
             android:id="@+id/buttonC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/buttonC" />
 
@@ -81,6 +96,7 @@
             android:id="@+id/buttonBackspace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/buttonBackspace" />
 
@@ -88,6 +104,7 @@
             android:id="@+id/buttonDiv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/buttonDiv" />
 
@@ -95,6 +112,7 @@
             android:id="@+id/buttonMultiplication"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/buttonMultiplication" />
 
@@ -109,6 +127,7 @@
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/button1" />
 
@@ -116,6 +135,7 @@
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/button2" />
 
@@ -123,6 +143,7 @@
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/button3" />
 
@@ -130,6 +151,7 @@
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/button4" />
 
@@ -137,6 +159,7 @@
             android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/button5" />
 
@@ -144,6 +167,7 @@
             android:id="@+id/buttonMinus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/buttonMinus" />
 
@@ -158,6 +182,7 @@
             android:id="@+id/button6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/button6" />
 
@@ -165,6 +190,7 @@
             android:id="@+id/button7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/button7" />
 
@@ -172,6 +198,7 @@
             android:id="@+id/button8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/button8" />
 
@@ -179,12 +206,14 @@
             android:id="@+id/button9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/button9" />
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPlus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:layout_span="2"
             android:text="@string/buttonPlus" />
@@ -200,6 +229,7 @@
             android:id="@+id/button0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:layout_span="2"
             android:textSize="@dimen/key_text_size"
             android:text="@string/button0" />
@@ -208,12 +238,14 @@
             android:id="@+id/buttonPt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:textSize="@dimen/key_text_size"
             android:text="@string/buttonPt" />
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
             android:layout_span="5"
             android:textSize="@dimen/key_text_size"
             android:text="@string/buttonResult" />
