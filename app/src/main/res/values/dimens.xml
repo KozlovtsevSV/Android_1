@@ -5,5 +5,4 @@
     <dimen name="workField_text_size">35sp</dimen>
     <dimen name="switchDarkTheme_text_size">18sp</dimen>
     <dimen name="buttonMarginLeft">5dp</dimen>
-
 </resources>

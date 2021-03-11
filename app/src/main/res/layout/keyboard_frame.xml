@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <TableLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -13,24 +12,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="10dp"
-        android:gravity="right">
+        android:gravity="left">
 
-        <com.google.android.material.switchmaterial.SwitchMaterial
-            android:id="@+id/switchDarkTheme"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSettings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_span="2"
-            android:buttonTint="@color/colorPrimary"
-            android:shadowColor="@color/black"
-            android:shadowDx="10"
-            android:shadowDy="10"
-            android:shadowRadius="20"
-            android:text="@string/switchDarkThemeText"
-            android:textColor="@color/white"
-            android:textOff="OFF"
-            android:textOn="ON"
-            android:textSize="@dimen/switchDarkTheme_text_size"
-            app:showText="true" />
+            android:layout_span="3"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
+            android:text="@string/buttonSettings"
+            android:textSize="@dimen/key_text_size" />
 
     </TableRow>
 

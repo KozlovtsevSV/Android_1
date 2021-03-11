@@ -14,18 +14,14 @@
         android:layout_marginBottom="10dp"
         android:gravity="center">
 
-        <com.google.android.material.switchmaterial.SwitchMaterial
-            android:id="@+id/switchDarkTheme"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSettings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_span="2"
-            android:buttonTint="@color/colorPrimary"
-            android:text="@string/switchDarkThemeText"
-            android:textColor="@color/white"
-            android:textOff="OFF"
-            android:textOn="ON"
-            android:textSize="@dimen/switchDarkTheme_text_size"
-            android:showText="true" />
+            android:layout_span="3"
+            android:layout_marginLeft="@dimen/buttonMarginLeft"
+            android:text="@string/buttonSettings"
+            android:textSize="@dimen/key_text_size" />
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextInfoField"

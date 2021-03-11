@@ -18,7 +18,10 @@
     <string name="buttonPlus">+</string>
     <string name="buttonResult">=</string>
     <string name="buttonPercent">%</string>
+    <string name="buttonSettings">Настройки</string>
     <string name="buttonC">С</string>
     <string name="buttonBackspace"><![CDATA[<-]]></string>
     <string name="switchDarkThemeText">Темная тема</string>
+    <string name="buttonSettingsSave">Сохранить</string>
+    <string name="buttonSettingsCancel">Отмена</string>
 </resources>
