@@ -1,3 +1,27 @@
 <resources>
-    <string name="app_name">lesson_1</string>
+    <string name="app_name">Сalculator</string>
+    <string name="button1">1</string>
+    <string name="button2">2</string>
+    <string name="button3">3</string>
+    <string name="button4">4</string>
+    <string name="button5">5</string>
+    <string name="button6">6</string>
+    <string name="button7">7</string>
+    <string name="button8">8</string>
+    <string name="button9">9</string>
+    <string name="button0">0</string>
+    <string name="buttonPt">.</string>
+    <string name="buttonCE">CE</string>
+    <string name="buttonDiv">/</string>
+    <string name="buttonMultiplication">*</string>
+    <string name="buttonMinus">-</string>
+    <string name="buttonPlus">+</string>
+    <string name="buttonResult">=</string>
+    <string name="buttonPercent">%</string>
+    <string name="buttonSettings">Настройки</string>
+    <string name="buttonC">С</string>
+    <string name="buttonBackspace"><![CDATA[<-]]></string>
+    <string name="switchDarkThemeText">Темная тема</string>
+    <string name="buttonSettingsSave">Сохранить</string>
+    <string name="buttonSettingsCancel">Отмена</string>
 </resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="key_text_size">24sp</dimen>
+    <dimen name="infoField_text_size">25sp</dimen>
+    <dimen name="workField_text_size">35sp</dimen>
+    <dimen name="switchDarkTheme_text_size">18sp</dimen>
+    <dimen name="buttonMarginLeft">5dp</dimen>
+</resources>
