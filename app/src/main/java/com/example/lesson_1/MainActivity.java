@@ -8,6 +8,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
@@ -16,7 +17,7 @@ import com.google.android.material.switchmaterial.SwitchMaterial;
 public class MainActivity extends AppCompatActivity {
 
     private Button[] arrayNumberButton = new Button[10];
-    private enum Operations {DIV, MULTIPLICATION, MINUS, PLUS, PERCENT, RESULT, C, CE, BACKSPACE}
+    public enum Operations {DIV, MULTIPLICATION, MINUS, PLUS, PERCENT, RESULT, C, CE, BACKSPACE}
     private Button[] arrayOperationButton = new Button[Operations.values().length];
 
     private double number;
@@ -36,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
     private Button mbuttonPt;
     private SwitchMaterial mSwitchDarkTheme;
 
-    private static final String NAME_KEY_NIGTH_THEME = "isNightTheme";
+    public final static  String NAME_KEY_NIGTH_THEME = "isNightTheme";
+    private final static String KEY_COUNTERS = "Counters";
 
     private static final int RESULT_SAVE = 1;
 
@@ -69,6 +71,26 @@ public class MainActivity extends AppCompatActivity {
         });
 
         upDateWorkField();
+    }
+
+    // Сохранение данных
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle instanceState) {
+        super.onSaveInstanceState(instanceState);
+        Counters counters = new Counters(number, resultOperation, currentOperation);
+        instanceState.putParcelable(KEY_COUNTERS, counters);
+    }
+
+    // Восстановление данных
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle instanceState) {
+        super.onRestoreInstanceState(instanceState);
+        Counters counters = instanceState.getParcelable(KEY_COUNTERS);
+        number = counters.getNumber();
+        resultOperation = counters.getResultOperation();
+        currentOperation = counters.getCurrentOperation();
+        upDateWorkField();
+        upDateInfoField();
     }
 
     @Override
